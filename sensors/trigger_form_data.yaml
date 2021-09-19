@@ -5,3 +5,13 @@ trigger_types:
     -
       name: "message"
       description: "MQTT message payload"
+      parameters_schema:
+        type: "object"
+        properties:
+          topicName:
+            description: "topic to subscribe to"
+            type: "string"
+            required: true
+        additionalProperties: false
+      payload_info:
+        - message
